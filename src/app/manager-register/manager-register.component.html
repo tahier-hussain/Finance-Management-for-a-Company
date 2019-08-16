@@ -1,0 +1,12 @@
+<div class="login-page">
+  <div class="form">
+    <form [formGroup]="register" class="login-form" (ngSubmit)="onSubmit(register.value)">
+      <p align="left">Manager Register</p>  
+      <input type="text" formControlName="name" placeholder="name"/>
+      <input type="password" formControlName="password" placeholder="password"/>
+      <input type="text" formControlName="mail" placeholder="email address"/>
+      <button [routerLink]="['/manager-login']">create</button>
+      <p class="message">Already registered? <a href="/manager-login">Sign In</a></p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Purpose</th>
+		<th>Amount</th>
+		<th>Description</th>
+		<th>Approval</th>
+	</tr>
+
+	<tr *ngFor="let regUser of regUsers; index as i">
+		<td>{{regUser.name}}</td>
+		<td>{{regUser.purpose}}</td>
+		<td>{{regUser.amount}}</td>
+		<td>{{regUser.description}}</td>
+		<td>{{regUser.approval}}</td>
+	</tr>
+</table>

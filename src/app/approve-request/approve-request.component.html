@@ -1,0 +1,26 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Purpose</th>
+		<th>Amount</th>
+		<th>Description</th>
+		<th>Approval</th>
+	</tr>
+
+	<tr *ngFor="let regUser of regUsers; index as i">
+		<td>{{regUser.name}}</td>
+		<td>{{regUser.purpose}}</td>
+		<td>{{regUser.amount}}</td>
+		<td>{{regUser.description}}</td>
+		<td>
+		<form [formGroup]="approve" (ngSubmit)="onSubmit(approve.value)">
+		<select name="approval" formControlName="approval">
+		<option [selected]="true"> Enter....</option>
+        <option value="Approved">Approved</option>
+        <option value="Disapproved">Disapproved</option>
+        <option value="Partially Approved">Partially Approved</option>
+      	</select>
+		</form>
+		</td>
+	</tr>
+</table>

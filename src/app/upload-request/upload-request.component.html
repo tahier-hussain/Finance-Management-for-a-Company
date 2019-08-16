@@ -1,0 +1,21 @@
+<div class="login-page">
+  <div class="form">
+    <form [formGroup]="request" class="login-form" (ngSubmit)="onSubmit(request.value)">
+      <p align="left">Upload Request</p>	
+      <input type="text" formControlName="name" placeholder="Name"/>
+      <input type="text" formControlName="empId" placeholder="Employee ID"/>
+      <input type="text" formControlName="amount" placeholder="Amount needed"/>
+      <select name="purpose" formControlName="purpose" placeholder="Enter Purpose">
+        <option value="Electricity">Electricity</option>
+        <option value="Rent">Rent</option>
+        <option value="Water">Water</option>
+        <option value="Snacks">Snacks</option>
+        <option value="Damage">Damage</option>
+        <option value="Service">Service</option>
+        <option value="Other">Other</option>
+      </select>
+      <textarea rows="10" cols="20" formControlName="description" placeholder="Description"></textarea>
+      <button>Submit Request</button>
+    </form>
+  </div>
+</div>
